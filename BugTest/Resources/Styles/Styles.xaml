@@ -322,9 +322,11 @@
     </Style>
 
     <Style TargetType="Switch">
-        <Setter Property="OnColor" Value="{OnPlatform MacCatalyst=Transparent}" />
-  
+        <!-- This is a workaround only for OnColor. Add this line and delete everything else -->
         <!--
+        <Setter Property="OnColor" Value="{OnPlatform MacCatalyst=Transparent}" />
+        -->
+  
         <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
         <Setter Property="ThumbColor" Value="{StaticResource White}" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -351,7 +353,6 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
-        -->
     </Style>
 
     <Style TargetType="TimePicker">
