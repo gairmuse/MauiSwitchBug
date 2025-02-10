@@ -15,8 +15,23 @@ public partial class MainPage : ContentPage
                 handler.PlatformView.PreferredStyle = UIKit.UISwitchStyle.Sliding;
             }
         });
+        Application.Current.RequestedThemeChanged += Current_RequestedThemeChanged;
 #endif
 	}
+
+    private void Current_RequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
+    {
+        Hack.ResetMacSwitchBackgroundColors(this.mainLayout);
+    }
+
+    private void WithoutHack_Toggled(object sender, ToggledEventArgs e)
+    {
+    }
+
+    private void WithHack_Toggled(object sender, ToggledEventArgs e)
+    {
+        Hack.ApplyMacSwitchHack((Switch)sender);
+    }
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{

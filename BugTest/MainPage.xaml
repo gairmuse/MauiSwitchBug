@@ -5,6 +5,7 @@
 
     <ScrollView>
         <VerticalStackLayout
+            x:Name="mainLayout"
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
@@ -15,7 +16,18 @@
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
-            <Switch HorizontalOptions="Center" />
+            <HorizontalStackLayout>
+                <StackLayout WidthRequest="50">
+                    <Switch x:Name="withoutHack" Toggled="WithoutHack_Toggled"/>
+                </StackLayout>
+                <Label Text="Without workaround" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <StackLayout WidthRequest="50">
+                    <Switch x:Name="withHack" Toggled="WithHack_Toggled"/>
+                </StackLayout>
+                <Label Text="With workaround" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
 
             <Label
                 Text="Hello, World!"

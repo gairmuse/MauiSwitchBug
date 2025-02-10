@@ -323,9 +323,7 @@
 
     <Style TargetType="Switch">
         <!-- This is a workaround only for OnColor. Add this line and delete everything else -->
-        <!--
         <Setter Property="OnColor" Value="{OnPlatform MacCatalyst=Transparent}" />
-        -->
 
         <!--
         <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
