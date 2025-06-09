@@ -17,7 +17,9 @@
     <Color x:Key="Gray600">#404040</Color>
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
-    <Color x:Key="MacSwitchBackgroundDark">#000000</Color>
+    <Color x:Key="MacControlDark">#292929</Color>
+    <Color x:Key="MacControlLight">#eaeaea</Color>
+    <Color x:Key="MacSwitchBackgroundDark">#040404</Color>
     <Color x:Key="MacSwitchBackgroundLight">#ffffff</Color>
 
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
